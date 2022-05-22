@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+
+
+  <title>Amaatra Crystal</title>
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  color: #000;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  /*overflow: hidden;*/
+  color: #000;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  /*-ms-scroll-chaining: none;
+  overscroll-behavior: none;*/
+  background: #fafafa;
+}
+.slick-track {
+  height: 100vh;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+/*.container {
+  margin-left:auto;
+  margin-right:auto;
+  width: 80%;
+  color: #333;
+  
+}*/
+
+.slick-slide {
+  text-align: center;
+  background: white;
+  margin:0px;
+}
+
+h4{
+  text-align:center;
+}
+.header{
+  position: relative;
+    width: 100%;
+    background:#ffffff;
+    opacity: 0.9;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.logo {
+  width: 75px;
+  position: fixed;
+  vertical-align: middle;
+  margin: 10px 25px 0px 25px;
+}
+.logo img {
+  width: 100%;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.about, .verticle-tab {
+  width: 100%;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.about .child {
+  width: 33.33%;
+}
+.about_head {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    font-weight: 700;
+    color: #c6a47e;
+}
+.about-deatils {
+  color: #fff;
+  font-weight: 400;
+    line-height: 1.5;
+    font-size: 15px;
+}  
+.about-deatils1{
+  color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 18px;
+    background: #000;
+    padding: 25px;
+    /*opacity: 0.9;*/
+    /* border: 1px solid; */
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px #8c8787;
+}
+.about_subhead{
+  font-size: 40px;
+  font-weight: 700;
+}
+.download {
+  width: 180px;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    letter-spacing: 0px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #9f7648;
+    margin: 42px auto 0 auto;
+    color: #fff;
+}
+.download.pricing {
+  position: absolute; 
+  width: 30%; 
+  font-size: 41px;
+  line-height: 50px; 
+  font-weight: 600; 
+  letter-spacing: 2px; 
+  padding: 20px 25px;
+}
+.slick-prev, .slick-next {
+  display: none !important;
+}
+.thumb {
+  width: 340px;
+    padding: 0;
+    margin: 0 auto;
+}
+.about-deatils1.thumb img {
+  width: 100%;
+}
+.big-logo {
+  margin: auto;
+    width: 500px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    /*box-shadow: 0px 0px 25px #000;*/
+}
+.big-logo h1, .big-logo h3{
+  margin-bottom: 0; color:#fff; text-shadow: 0px 0px 3px #1d97d3;
+}
+.box {
+  width: 24%;
+    margin: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.aminites{
+      width: 100%;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.abs_hov{
+  position: absolute;
+    height: 100%;
+    font-size: 35px;
+    /*text-shadow: 0px 0px 5px black;*/
+    font-weight: bold;
+    top: 0;
+    display: table;
+    width: 100%;
+    color: #fff;
+    background: #1d1b1b47;
+    z-index: 1;
+}
+.abs_hov label {
+  display: table-cell;
+  vertical-align: middle;
+      transition: all .5s ease 0s;
+}
+.abs_hov label:hover {
+  transform: scale(1.5);
+      transition: all .5s ease 0s;
+}
+.box img {
+  width: 100%;
+ /* transform: scale(1.0);*/
+      transition: all .5s ease 0s;
+}
+.delivered {
+  width: 50%;
+}
+.delivered .download {
+  margin: 42px 0 0 0;
+}
+
+.season_tabs {
+  position: relative;   
+  min-height: 360px; /* This part sucks */
+  clear: both;
+  margin: 25px 0;
+  width: 100%;
+}
+.season_tab {
+  float: left;  
+  clear: both;
+  width: 286px;
+}
+.season_tab label {
+    background: #fbfaf8;
+    padding: 10px;
+    /*border: 1px solid #c6a47e;*/
+    margin-left: -1px;
+    font-size: 21px;
+    vertical-align: middle;
+    position: relative;
+    left: 1px;
+    width: 264px;
+    height: 68px;
+    display: table-cell;
+}
+.season_tab [type=radio] {
+  display: none;   
+}
+.season_content {
+  position: absolute;
+  top: 0;
+  left: 286px;
+  background: white;
+  right: 0;
+  bottom: 0;
+  padding: 0 20px;
+  /*border: 1px solid #ccc;*/
+  text-align: left;
+ }
+.season_content span {
+  animation: 0.5s ease-out 0s 1 slideInFromTop; 
+  text-align: left;
+}
+[type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 1px solid #c6a47e;
+  z-index: 2;
+}
+[type=radio]:checked ~ label ~ .season_content {
+  z-index: 1;
+}
+.season-holder {display: table;width: 100%;}
+.season-cell {
+    display: table-cell;
+    width: 25%;
+    vertical-align: top;
+    background: #ffffff;
+    padding-top: 115px;
+}
+.season-inner {
+  display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 15px 0;
+
+}
+.site-img {
+  display: table-cell;
+    width: 40%;
+    padding: 50px;
+    background: #fbfaf8;
+}
+.contact {
+  position: fixed;
+  z-index: 111;
+  top: 50%;
+  right: -7px;
+  transform: rotate(180deg);
+  
+}
+.contact a {
+  /*background: #bc961e;*/
+  padding: 8px 7px;
+  width: 110px;
+  /*box-shadow: 0px 0px 5px #000;*/
+  color: #fff;
+}
+.aminite-head {
+  font-size: 42px;
+  line-height: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase; 
+  margin-bottom: 10px; 
+  margin-top: 22px; 
+  color:#fff;
+}
+@media only screen and (max-width: 900px) {
+  .about .child, .delivered {
+    width: 100% !important;
+    display: block !important;
+    height: auto !important;
+  }
+.download {
+    z-index: 111;
+    /*position: absolute;
+    width: 60%;
+    font-size: 21px;
+    padding: 5px 15px;
+    text-align: center;
+    box-shadow: 0px 0px 5px #000;
+    margin: 50px auto 50px auto;*/
+    } 
+.box {
+    width: 30.33%;
+    margin: 8px 8px 8px 8px;
+  }
+  .abs_hov label {
+    text-align: center;
+    font-size: 18px;
+  }
+  .download.pricing {
+    position: absolute;
+    width: 70%;
+    font-size: 21px;
+    padding: 5px 15px;
+    text-align: center;
+    box-shadow: 0px 0px 5px #000;
+  }
+  .big-logo h1, .big-logo h3 {
+    text-align: center;
+  }
+  .aminite-head { 
+    padding-top: 42px;
+    text-align: center;
+    margin-top: 0; 
+  }
+  .season_tabs, .season_tab {
+    margin-top: 0 !important;
+  }
+
+  .season_tab {
+    width: 100% !important;
+  }
+  .season_content {
+    position: relative !important;
+    left: 0 !important;
+  }
+}
+
+</style>
+
+
+</head>
+
+<body>
+  <div class='container-fluid'>
+    <div class="contact"><a href="#"><img src="http://www.amaatragroup.com/images/but-enq.png"/></a></div>
+    <div class="header" style="">
+      <div class="logo">
+        <img src="https://services.google.com/fh/files/emails/crystal_logo1.png" alt="" />
+      </div>
+      <div class="logo" style="width: 35px; padding-top: 14px; padding-right: 25px; right:0;">
+        <i class="bi bi-person-lines-fill"></i>
+      </div>
+    </div>
+    <div class='slider-item'>
+    <!-- slide1 start -->
+      <div class="slide-element" style="background-color: transparent; background-repeat: no-repeat; background-image: url(&quot;https://sagen.qodeinteractive.com/wp-content/uploads/2019/07/home-6-rev-1-img-01.jpg&quot;); background-size: cover; background-position: 50% 50%; max-width: 1920px;width: 100%; height: 100%; opacity: 1; top: 0px; left: 0px; visibility: inherit; z-index: 20;">
+      <div class="flex-container">
+        <div class="big-logo">
+          <img src="https://services.google.com/fh/files/emails/crystal_logo1.png" alt="" style="width:100%;" />
+        <h1 style="">AMAATRA CRYSTAL</h1>
+        <h3 style="">COMMETED TO EXCELINCE</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- slide2 start -->
+    <div class="slide-element">
+      <!-- <h3>About/Missson/Visson</h3> -->
+      <div class="about">
+        <div class="child" style="background-color: transparent; background-repeat: no-repeat; background-image: url(http://demo.leebrosus.com/pakrco/wp-content/uploads/2021/11/h2-img1.jpg); background-size: cover; background-position: 50% 50%; height: 100%; opacity: 1; top: 0px; left: 0px; visibility: inherit; z-index: 20;">
+          <div class="flex-container" style="">
+            <div style="padding: 80px 55px; ">
+              <div class="about-deatils1" style="">
+              <h1 style="color:#c6a47e; margin-top: 0;">Vission</h1>
+              Tempor incididunt ut labore et dolore magna aliqua. Ut <br/>
+              Ut enim ad minim veniam quis nostruercitation ullamco laboris nisi ut aliquip ex ea commonsequat Duis aute irure dolor reprehei voluptate esseu fugiat nulla pariatur.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="child">
+          <div class="flex-container" style="background-color: #282d32;">
+            <div style="padding: 80px 55px;">
+              <p class="about_head">About Us</p>
+              <h1 class="about_subhead" style="margin-bottom: 0; color:#fff;">
+                A Small Efficient
+                <em style="color: #c6a47e; font-style: normal;">Interior Designing</em> Team
+              </h1>
+
+              <p class="about-deatils" style="">Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostruercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehei voluptate velit esse cillum dolore eu fugiat nulla pariatur Duis aute irure dolor in reprehei voluptate veliet esse cillum dolore eu fugiat nulla pariatur.. <br/>
+              Ut enim ad minim veniam quis nostruercitation ullamco laboris nisi ut aliquip ex ea commonsequat Duis aute irure dolor reprehei voluptate esseu fugiat nulla pariatur.</p>
+
+              <a class="download" href="">Know More About Us</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="child" style="background-color: transparent; background-repeat: no-repeat; background-image: url(http://demo.leebrosus.com/pakrco/wp-content/uploads/2021/11/h2-img1.jpg); background-size: cover; background-position: 50% 50%; height: 100%; opacity: 1; top: 0px; left: 0px; visibility: inherit; z-index: 20;">
+          <div class="flex-container" style="">
+            <div style="padding: 80px 55px;">
+              <div class="about-deatils1" style="">
+              <h1 style="color:#c6a47e; margin-top: 0;">Mission</h1>
+              Tempor incididunt <br/>
+              Ut enim ad minim veniam quis nostruercitation ullamco laboris nisi ut aliquip ex ea commonsequat Duis aute irure dolor reprehei voluptate esseu fugiat nulla pariatur.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- slide3 start -->
+    <div class="slide-element" style="background-color: rgba(23,23,23,0.95);">
+      <h2 class="aminite-head" style="">Aminites</h2> 
+      <div class="aminites" style="background-color: rgba(23,23,23,0.95);">
+     
+          <div class="box" style="">
+              <img src="https://20093980.fs1.hubspotusercontent-na1.net/hubfs/20093980/raw_assets/public/apartio/images/gallery/gallery-v1-1.jpg">
+              <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Fitness Centers</label></div>
+            <!-- <div class="flex-container" style="">
+              <div style="">
+                <div class="about-deatils1" style="">
+                <h1 style="color:#c6a47e; margin-top: 0;">Mission</h1>
+                Tempor incididunt <br/>
+                Ut enim ad minim veniam quis nostruercitation ullamco laboris nisi ut aliquip ex ea commonsequat Duis aute irure dolor reprehei voluptate esseu fugiat nulla pariatur.</div>
+              </div>
+            </div> -->
+          </div>
+
+          <div class="box" style="">
+            <img src="https://20093980.fs1.hubspotusercontent-na1.net/hubfs/20093980/raw_assets/public/apartio/images/gallery/gallery-v1-1.jpg">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Fitness Centers</label></div>
+          </div>
+
+          <div class="box" style="">
+            <img src="https://20093980.fs1.hubspotusercontent-na1.net/hubfs/20093980/raw_assets/public/apartio/images/gallery/gallery-v1-1.jpg">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Fitness Centers</label></div>
+          </div>
+
+          <div class="box" style="">
+            <img src="https://20093980.fs1.hubspotusercontent-na1.net/hubfs/20093980/raw_assets/public/apartio/images/gallery/gallery-v1-1.jpg">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Fitness Centers</label></div>
+          </div>
+        
+
+
+          <div class="box" style="">
+            <img src="https://20093980.fs1.hubspotusercontent-na1.net/hubfs/20093980/raw_assets/public/apartio/images/gallery/gallery-v1-1.jpg">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Fitness Centers</label></div>
+          </div>
+
+          <div class="box" style="">
+            <img src="https://20093980.fs1.hubspotusercontent-na1.net/hubfs/20093980/raw_assets/public/apartio/images/gallery/gallery-v1-1.jpg">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Fitness Centers</label></div>
+          </div>
+
+          <div class="box" style="">
+            <img src="https://20093980.fs1.hubspotusercontent-na1.net/hubfs/20093980/raw_assets/public/apartio/images/gallery/gallery-v1-1.jpg">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Fitness Centers</label></div>
+          </div>
+
+          <div class="box" style="">
+            <img src="https://20093980.fs1.hubspotusercontent-na1.net/hubfs/20093980/raw_assets/public/apartio/images/gallery/gallery-v1-1.jpg">
+            <div class="abs_hov"><label style="display: table-cell;vertical-align: middle;">Fitness Centers</label></div>
+          </div>
+        
+      </div>
+    </div>
+
+    <div class="slide-element">
+      <!-- <h3>Delivered</h3> -->
+      <div class="about">
+        <div class="delivered" style="background-color: transparent; background-repeat: no-repeat; background-image: url(http://demo.leebrosus.com/pakrco/wp-content/uploads/2021/11/h2-img1.jpg); background-size: cover; background-position: 50% 50%; height: 100%; opacity: 1; top: 0px; left: 0px; visibility: inherit; z-index: 20;">
+          
+        </div>
+
+        <div class="delivered">
+          <div class="flex-container" style="background-color: #282d32;">
+            <div style="padding: 80px 55px; text-align: left;">
+              <p class="about_head">OUR PROJECT</p>
+              <h1 class="about_subhead" style="margin-bottom: 0; color:#fff;">
+                Our Latest Work
+              </h1>
+
+              <p class="about-deatils" style="width: 80%;">Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostruercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehei voluptate velit esse cillum dolore eu fugiat nulla pariatur Duis aute irure dolor in reprehei voluptate veliet esse cillum dolore eu fugiat nulla pariatur.. <br/>
+              Ut enim ad minim veniam quis nostruercitation ullamco laboris nisi ut aliquip ex ea commonsequat Duis aute irure dolor reprehei voluptate esseu fugiat nulla pariatur.</p>
+
+              <a class="download" href="">Download Pricing Table</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+     <div class="slide-element">
+      <h2 class="aminite-head" style="color:#282828;">Let the outdoors in™</h2>
+
+       <div class="verticle-tab" style="margin-top: 45px;">    
+        <div class="season_tabs">    
+           <div class="season_tab" style="margin-top: 32px;">
+               <input type="radio" id="tab-1" name="tab-group-1" checked>
+               <label for="tab-1">ONE BEDROOM</label>
+               
+               <div class="season_content">
+                  <div class="season-holder">
+                   <div class="season-cell" style="">
+
+                    <div class="season-inner" style=""><span>Total area</span>-----<span>158 Sq</span></div>
+                    <div class="season-inner"><span>Bedroom 1</span>-----<span>158 Sq</span></div>
+                    <div class="season-inner"><span>Bathroom</span>-----<span>158 Sq</span></div>
+                    <div class="season-inner"><span>Kitchen</span>-----<span>158 Sq</span></div>
+                    <div class="season-inner"><span>Livingroom</span>-----<span>158 Sq</span></div>
+                   </div>
+                   <div class="site-img"><img src="https://demothemedh.b-cdn.net/pakrco/wp-content/uploads/2021/12/pj-3room.jpg" alt="" style="width:100%;position: relative;"></div>
+                  </div>
+               </div> 
+           </div>    
+           <div class="season_tab">
+               <input type="radio" id="tab-2" name="tab-group-1">
+               <label for="tab-2">TWO BEDROOMS</label>
+               
+               <div class="season_content">
+                  <div class="season-holder">
+                   <div class="season-cell" style="">
+                    
+                    <div class="season-inner" style=""><span>Total area</span>-----<span>168 Sq</span></div>
+                    <div class="season-inner"><span>Bedroom 1</span>-----<span>158 Sq</span></div>
+                    <div class="season-inner"><span>Bathroom</span>-----<span>158 Sq</span></div>
+                    <div class="season-inner"><span>Kitchen</span>-----<span>158 Sq</span></div>
+                    <div class="season-inner"><span>Livingroom</span>-----<span>158 Sq</span></div>
+                   </div>
+                   <div class="site-img"><img src="https://demothemedh.b-cdn.net/pakrco/wp-content/uploads/2021/12/pj-2room.jpg" alt="" style="width:100%;position: relative;"></div>
+                  </div>
+               </div> 
+           </div>    
+           <div class="season_tab">
+               <input type="radio" id="tab-3" name="tab-group-1">
+               <label for="tab-3">THREE BEDROOMS</label>
+             
+               <div class="season_content">
+                  <div class="season-holder">
+                   <div class="season-cell" style="">
+                    
+                    <div class="season-inner" style=""><span>Total area</span>-----<span>158 Sq</span></div>
+                    <div class="season-inner"><span>Bedroom 1</span>-----<span>178 Sq</span></div>
+                    <div class="season-inner"><span>Bathroom</span>-----<span>158 Sq</span></div>
+                    <div class="season-inner"><span>Kitchen</span>-----<span>158 Sq</span></div>
+                    <div class="season-inner"><span>Livingroom</span>-----<span>158 Sq</span></div>
+                   </div>
+                   <div class="site-img"><img src="https://demothemedh.b-cdn.net/pakrco/wp-content/uploads/2021/12/pj-1room.png" alt="" style="width:100%;position: relative;"></div>
+                  </div>
+               </div> 
+           </div>
+
+          <div class="season_tab">
+           <input type="radio" id="tab-4" name="tab-group-1">
+           <label for="tab-4">STUDIO PENHOUSE</label>
+           <div class="season_content">
+              <div class="season-holder">
+                   <div class="season-cell" style="">
+                    
+                    <div class="season-inner" style=""><span>Total area</span>-----<span>158 Sq</span></div>
+                    <div class="season-inner"><span>Bedroom 1</span>-----<span>168 Sq</span></div>
+                    <div class="season-inner"><span>Bathroom</span>-----<span>158 Sq</span></div>
+                    <div class="season-inner"><span>Kitchen</span>-----<span>158 Sq</span></div>
+                    <div class="season-inner"><span>Livingroom</span>-----<span>158 Sq</span></div>
+                   </div>
+               <div class="site-img"><img src="https://demothemedh.b-cdn.net/pakrco/wp-content/uploads/2021/12/pj-3room.jpg" alt="" style="width:100%;position: relative;"></div>
+              </div>
+           </div>  
+          </div>
+
+          <div class="season_tab">
+           <input type="radio" id="tab-5" name="tab-group-1">
+           <a class="download pricing" style=" " href="">Download Pricing Table</a>
+         </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js'></script>
+  
+  <script id="rendered-js" >
+const slider = $(".slider-item");
+slider.slick({
+  dots: false,
+   speed: 1000,
+   autoplay:6000,
+  slidesToShow: 1,
+   fade: true,
+  cssEase: 'linear', 
+  adaptiveHeight: true,
+  responsive: [{
+      breakpoint: 900,
+      settings: "unslick",
+      infinite: true,
+    }]
+ });
+
+
+slider.on('wheel', function (e) {
+  e.preventDefault();
+
+  if (e.originalEvent.deltaY < 0) {
+    $(this).slick('slickNext');
+  } else {
+    $(this).slick('slickPrev');
+  }
+});
+
+
+    </script>
+
+  
+
+</body>
+
+</html>
