@@ -27,7 +27,7 @@ body{
   text-rendering: optimizeSpeed;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background: #212529;
+  background: #282d32;
 }
 
 img {
@@ -97,19 +97,24 @@ h4{
 }
 .col {
   display: table-cell;
-  width: 50%;
-  vertical-align: top;
+    width: 50%;
+    overflow: hidden;
+    height: 100%;
+    vertical-align: top;
 }
 .cell {
   width: 32%;
 }
 .cell-inner {
-  background: #000;
+  background: #1e2226;
   width: 100%;
   text-align: center;
   color: #c6a47e;
   padding: 25px 0;
+  margin-top: 20px;
   font-weight: 600;
+  min-height: 185px;
+  position: relative;
   letter-spacing: 1px;
 }
 .cell-inner .fa {
@@ -119,6 +124,40 @@ h4{
   color: #fff;
   font-size: 28px;
 }
+.cell-inner p {
+  padding: 0 25px;
+  margin: 0;
+}
+.cell-inner:before {
+    top: 0px;
+    border-radius: 0 0 10px 10px;
+}
+.cell-inner:before, .cell-inner:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: visible;
+    background: #c6a47e;
+    height: 5px;
+    margin: auto;
+}
+.cell-inner:after {
+    bottom: 0px;
+    border-radius: 10px 10px 0 0;
+}
+.cell-inner:hover:before {
+    opacity: 1;
+    visibility: visible;
+    top: 0px;
+}
+.cell-inner:hover:after {
+    opacity: 1;
+    visibility: visible;
+    bottom: 0px;
+}
 .season-cell {
     display: table-cell;
     padding-top: 30px;
@@ -126,7 +165,7 @@ h4{
     width: 23%;
     color: #fff;
     /* vertical-align: middle; */
-    background: #000;
+    background: #1e2226;
 }
 .season-inner {
     display: flex;
@@ -174,7 +213,8 @@ footer p {
   font-size: 15px; text-align: center; color: #fff;
 }
 .location {
-  width: 100%;
+  width: 75%;
+  height: 500px;
 }
 
 .product-thumbs .swiper-slide img {
@@ -211,7 +251,7 @@ footer p {
   border-radius: 53px;
 }
 .content {
-  background: #000;
+  background: #1e2226;
     color: #fff;
     padding: 35px;
     text-align: center;
@@ -232,7 +272,7 @@ footer p {
   text-align: center;
 }
 
-.swiper-slide.th-bx.swiper-slide-active:before {
+/*.swiper-slide.th-bx.swiper-slide-active:before {
     content: '';
     width: 0;
     right: 201px;
@@ -243,6 +283,30 @@ footer p {
     border-left: solid 22px transparent;
     border-right: solid 22px transparent;
     position: absolute;
+}
+*/
+.it-heading h4 {
+    margin-top: 55px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    font-weight: 600;
+    z-index: 1;
+    color: #c6a47e;
+}
+
+.it-heading h2 {
+    text-transform: capitalize;
+    font-weight: 700;
+    z-index: 2;
+    position: relative;
+    margin: 6px 0 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    line-height: 43px;
+    margin: 0px 0 50px 0;
 }
 
 </style>
@@ -276,7 +340,7 @@ footer p {
   </div> -->
 
   <div class='container'>
-    <div class="table location" style="background: #000; margin-top: 35px;">
+    <div class="table location" style="background: #1e2226; margin-top: 35px;">
       <div class="col">
         <div class="season-cell" style="">
           <div class="season-inner" style=""><span><i class="fa fa-university" aria-hidden="true"></i> University</span> <span>158 Sq</span></div>
@@ -287,7 +351,7 @@ footer p {
            <div class="season-inner"><span><i class="fa fa-university" aria-hidden="true"></i> University</span> <span>158 Sq</span></div>
         </div>
       </div>
-      <div class="col"><img src="https://20093980.fs1.hubspotusercontent-na1.net/hubfs/20093980/raw_assets/public/apartio/images/parallax-background/map.jpg" style="height: 500px;" /></div>
+      <div class="col"><img src="https://20093980.fs1.hubspotusercontent-na1.net/hubfs/20093980/raw_assets/public/apartio/images/parallax-background/map.jpg" style="" /></div>
     </div>
   </div>
 
@@ -321,7 +385,7 @@ footer p {
 
   <div class='container'>
     <div>
-      <form style="background: #000;">
+      <form style="background: #1e2226;">
         <h2 style="color: #fff;
     text-align: center;
     font-size: 36px;
@@ -344,7 +408,9 @@ footer p {
 
   <div class="container" style="width:80%; margin:0 auto;">
     <div class="row">
-      <div class="product-left">
+      <div class="it-heading">
+        <h4>OUR TESTIMONIAL</h4>
+        <h2>What Client Says</h2>
         <div class="swiper-container product-thumbs">
             <div class="swiper-wrapper">
               <div class="swiper-slide th-bx" style="width: 100px !important">
@@ -410,7 +476,7 @@ footer p {
  
  <script id="rendered-js" >
 /* product left start */
-if ($(".product-left").length) {
+if ($(".it-heading").length) {
   var productSlider = new Swiper('.product-slider', {
     spaceBetween: 0,
     centeredSlides: false,
