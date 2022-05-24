@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
 
 
-  <title>CodePen - Implementing mouse scroll in slick.js</title>
+  <title>Contact</title>
 
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,6 @@ body{
   text-rendering: optimizeSpeed;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background: #282d32;
 }
 
 img {
@@ -98,9 +97,7 @@ h4{
 .col {
   display: table-cell;
     width: 50%;
-    overflow: hidden;
-    height: 100%;
-    vertical-align: top;
+    vertical-align: middle;
 }
 .cell {
   width: 32%;
@@ -169,19 +166,21 @@ h4{
 }
 .season-cell h2 {    
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-top: 0;
-    margin-bottom: 2px;
+    margin-bottom: 15px;
   }
 .season-inner {
     display: flex;
     justify-content: space-between;
     width: 80%;
     margin: 0 auto;
-    padding: 25px 0;
+    padding: 15px 0;
     border-bottom: 1px solid #dbd8d8;
+
+
 }
 .season-inner i {
     padding-right: 10px;
@@ -226,8 +225,11 @@ footer p {
   font-size: 15px; text-align: center; color: #fff;
 }
 .location {
-  width: 100%;
-  height: 500px;
+      width: 100%;
+      background: #1e2226;
+    /* height: 500px; */
+    display: table;
+    vertical-align: middle;
 }
 
 .product-thumbs .swiper-slide img {
@@ -321,6 +323,9 @@ footer p {
     line-height: 43px;
     margin: 0px 0 50px 0;
 }
+.surrounding {
+  color:#fff; margin: 45px auto 62px auto; text-align: center;
+}
 
 @media only screen and (max-width: 900px) {
   .cell, .tb-cell, textarea {width: 100%;}
@@ -334,7 +339,7 @@ footer p {
 
 </head>
 
-<body>
+<body style="background-color: transparent; background-repeat: no-repeat; background-image: url(images/black-bg.jpeg); background-size: cover; background-position: 50% 50%; height: 100%; opacity: 1; top: 0px; left: 0px; visibility: inherit; z-index: 20;">
   <div class='container-fluid' style="width: 100%;">
     <div class="header" style="">
       <div class="logo">
@@ -346,22 +351,23 @@ footer p {
     </div>
   </div>
     
-  <h1 style="color:#fff; margin: 35px auto; text-align: center;">CONTACT US | SURROUNDING | LOCATIONS</h1>
-  <div class='container'>
+  <h1 class="surrounding" style="">CONTACT US | SURROUNDING | LOCATIONS</h1>
+  <div class='container' >
     <div class="table location" style="background: #1e2226; margin-top: 35px;">
-      <div class="col">
+      <div class="col"><img src="images/location.jpg" style="" /></div>
+      <div class="col" style="width: 40%;">
         <div class="season-cell" style="">
           <h2>Surrounding</h2>
-          <div class="season-inner" style=""><span><i class="fa fa-university" aria-hidden="true"></i>University / Collage</span> <span>158 Sq</span></div>
-          <div class="season-inner"><span><i class="fa fa-hospital-o" aria-hidden="true"></i> Hospital</span> <span>158 Sq</span></div>
-          <div class="season-inner"><span><i class="fa fa-train" aria-hidden="true"></i> Railway Station</span> <span>158 Sq</span></div>
-          <div class="season-inner"><span><i class="fa fa-bus" aria-hidden="true"></i> Bus Stand</span> <span>158 Sq</span></div>
-          <div class="season-inner"><span><i class="fa fa-money" aria-hidden="true"></i> Bank/ATM</span> <span>158 Sq</span></div>
-           <div class="season-inner"><span><i class="fa fa-plane" aria-hidden="true"></i> AirPort</span> <span>158 Sq</span></div>
-            <div class="season-inner"><span><i class="fa fa-tree" aria-hidden="true"></i> Park</span> <span>158 Sq</span></div>
+          <div class="season-inner" style=""><span>University / Collage</span> <span>158 Sq</span></div>
+          <div class="season-inner"><span>Hospital</span> <span>158 Sq</span></div>
+          <div class="season-inner"><span>Railway Station</span> <span>158 Sq</span></div>
+          <div class="season-inner"><span>Bus Stand</span> <span>158 Sq</span></div>
+          <div class="season-inner" style="border-bottom: none; padding-bottom:0;"><span>Bank/ATM</span> <span>158 Sq</span></div>
+          <!--  <div class="season-inner"><span><i class="fa fa-plane" aria-hidden="true"></i> AirPort</span> <span>158 Sq</span></div>
+            <div class="season-inner"><span><i class="fa fa-tree" aria-hidden="true"></i> Park</span> <span>158 Sq</span></div> -->
         </div>
       </div>
-      <div class="col"><img src="https://20093980.fs1.hubspotusercontent-na1.net/hubfs/20093980/raw_assets/public/apartio/images/parallax-background/map.jpg" style="" /></div>
+    
     </div>
   </div>
 
